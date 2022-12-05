@@ -6,6 +6,8 @@
 	positionMap.set('education', { x: -200, y: 300 });
 
 	let currentPosition: { x: number; y: number } = { x: 0, y: 0 };
+	let cvWidth = 0;
+
 	let headingElement: HTMLDivElement;
 	let skillsElement: HTMLDivElement;
 	let workHistoryElement: HTMLDivElement;
@@ -39,9 +41,9 @@
 
 <div
 	class="container"
-	style="--positionX: {currentPosition.x}px; --positionY: {currentPosition.y}px"
+	style="--positionX: {currentPosition.x + cvWidth}px; --positionY: {currentPosition.y}px"
 >
-	<div class="cvContainer">
+	<div class="cvContainer" bind:clientWidth={cvWidth}>
 		<div
 			class="section"
 			bind:this={headingElement}
@@ -111,11 +113,11 @@
 
 <style>
 	* {
-		color: #fff;
+		color: #232427;
 	}
 
 	:root {
-		--gray: #292c30;
+		--color: #fff;
 	}
 
 	.container {
@@ -123,7 +125,7 @@
 		width: 100%;
 		min-height: 100vh;
 		display: flex;
-		justify-content: center;
+		justify-content: start;
 		background-image: url('/stars.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -134,28 +136,15 @@
 	}
 
 	.cvContainer {
-		width: 60%;
+		width: 50%;
 		min-height: 90vh;
-		background: var(--gray);
+		background: var(--color);
 		padding: 12px;
-		margin: 12px;
+		margin: 8px;
 		border-radius: 8px;
 	}
 
 	.section {
 		margin-top: 16px;
-	}
-
-	@media screen and (max-width: 1200px) {
-		.cvContainer {
-			width: 80%;
-		}
-	}
-
-	@media screen and (max-width: 800px) {
-		.cvContainer {
-			width: 100%;
-			border-radius: 0;
-		}
 	}
 </style>
