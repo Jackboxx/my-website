@@ -11,8 +11,7 @@ const config = {
 		adapter: adapter({
 			out: './build',
 			fallback: 'static'
-		}),
-		outDir: 'svelteKit'
+		})
 	}
 };
 
