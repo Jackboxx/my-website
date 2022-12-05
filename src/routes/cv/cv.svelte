@@ -10,9 +10,9 @@
 	let transitionDirection = 1;
 
 	const headingUrl = '';
-	const skillsUrl = '/skills.jpg';
-	const workHistoryUrl = '/workHistory.jpg';
-	const educationUrl = '/education.jpg';
+	const skillsUrl = '/img/skills.jpg';
+	const workHistoryUrl = '/img/workHistory.jpg';
+	const educationUrl = '/img/education.jpg';
 
 	let panels: Panel[] = [
 		{
