@@ -1,13 +1,44 @@
 <script lang="ts">
-	const transitionSeconds = 0.5;
-	let currentUrl = '';
-	let transitionClass: 'transition' | '' = '';
-	let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
+	import ImagePanel from './imagePanel.svelte';
+
+	type Panel = {
+		url: string;
+		isShown: boolean;
+	};
+
+	let windowHeight = 0;
+	let transitionDirection = 1;
+
+	const headingUrl = '';
+	const skillsUrl = '/skills.jpg';
+	const workHistoryUrl = '/workHistory.jpg';
+	const educationUrl = '/education.jpg';
+
+	let panels: Panel[] = [
+		{
+			url: headingUrl,
+			isShown: true
+		},
+		{
+			url: skillsUrl,
+			isShown: false
+		},
+		{
+			url: workHistoryUrl,
+			isShown: false
+		},
+		{
+			url: educationUrl,
+			isShown: false
+		}
+	];
 
 	let headingElement: HTMLDivElement;
 	let skillsElement: HTMLDivElement;
 	let workHistoryElement: HTMLDivElement;
 	let educationElement: HTMLDivElement;
+
+	let currentElement: HTMLElement;
 
 	const onClick = (e: Event) => {
 		matchElement(e.target as HTMLElement);
@@ -18,42 +49,34 @@
 	};
 
 	const matchElement = (element: HTMLElement) => {
-		transitionClass = 'transition';
+		transitionDirection = element.offsetTop - currentElement?.offsetTop > 0 ? 1 : -1;
+		currentElement = element;
 		switch (element) {
 			case headingElement:
-				clearTimeout(timeout);
-				timeout = setTimeout(() => {
-					currentUrl = '';
-					transitionClass = '';
-				}, transitionSeconds * 1000);
+				panels = panels.map((p) => {
+					return { url: p.url, isShown: p.url === headingUrl };
+				});
 				break;
 			case skillsElement:
-				clearTimeout(timeout);
-				timeout = setTimeout(() => {
-					currentUrl = '/skills.jpg';
-					transitionClass = '';
-				}, transitionSeconds * 1000);
+				panels = panels.map((p) => {
+					return { url: p.url, isShown: p.url === skillsUrl };
+				});
 				break;
 			case workHistoryElement:
-				clearTimeout(timeout);
-				timeout = setTimeout(() => {
-					currentUrl = './workHistory.jpg';
-					transitionClass = '';
-				}, transitionSeconds * 1000);
+				panels = panels.map((p) => {
+					return { url: p.url, isShown: p.url === workHistoryUrl };
+				});
 				break;
 			case educationElement:
-				clearTimeout(timeout);
-				timeout = setTimeout(() => {
-					currentUrl = '/education.jpg';
-					transitionClass = '';
-				}, transitionSeconds * 1000);
-				break;
-			default:
-				transitionClass = '';
+				panels = panels.map((p) => {
+					return { url: p.url, isShown: p.url === educationUrl };
+				});
 				break;
 		}
 	};
 </script>
+
+<svelte:window bind:innerHeight={windowHeight} />
 
 <div class="container">
 	<div class="cvContainer">
@@ -122,11 +145,11 @@
 			</ul>
 		</div>
 	</div>
-
-	<div
-		class="backgroundContainer {transitionClass}"
-		style="--img-url: url({currentUrl}); --transition-duration: {transitionSeconds}s;"
-	/>
+	{#each panels as panel}
+		{#if panel.isShown}
+			<ImagePanel url={panel.url} distance={1.5 * windowHeight * transitionDirection} />
+		{/if}
+	{/each}
 </div>
 
 <style>
@@ -139,6 +162,7 @@
 	}
 
 	.container {
+		position: relative;
 		margin: 0;
 		width: 100%;
 		min-height: 100vh;
@@ -146,23 +170,8 @@
 		justify-content: start;
 	}
 
-	.backgroundContainer {
-		flex: 50%;
-		background-image: var(--img-url);
-		background-size: cover;
-		background-repeat: no-repeat;
-		opacity: 0.5;
-		transition: var(--transition-duration) opacity cubic-bezier(0.165, 0.84, 0.44, 1);
-	}
-
-	.backgroundContainer.transition {
-		background-position-y: 100vh;
-		opacity: 0;
-		transition: var(--transition-duration) cubic-bezier(0.165, 0.84, 0.44, 1);
-	}
-
 	.cvContainer {
-		flex: 50%;
+		width: 50%;
 		min-height: 100vh;
 		background: var(--color);
 		padding: 12px;
