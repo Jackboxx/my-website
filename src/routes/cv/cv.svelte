@@ -1,55 +1,80 @@
-<script></script>
+<script lang="ts">
+	export let distancePercentage = 0;
 
-<div class="cvContainer">
-	<div class="sidebar" />
-	<div class="content">
-		<div class="headingContainer hugeText">
-			<div class="mainHeading hugeText">Lucy Gschwantner</div>
-			<div class="point">email: lucygschwantner@gmail.com</div>
-		</div>
-		<div class="skillsContainer">
-			<div class="heading headingText">Skills</div>
-			<div class="point">JavaScript and Typescript programming in Node and React</div>
-			<div class="point">Experience in creating REST APIs</div>
-			<div class="point">
-				Rust development, mainly with web sockets and server-client communication
-			</div>
-			<div class="point">Experienced in creating video games with C#</div>
-			<div class="point">Knowledge of Java for Android</div>
-			<div class="point">Know-how for databases (MySQL, postgreSQL)</div>
-		</div>
-		<div class="workHistoryContainer">
-			<div class="heading headingText">Work History</div>
-			<div class="point">Experienced in creating video games with C#</div>
-			<div class="point">Knowledge of Java for Android</div>
-			<div class="point">Know-how for databases (MySQL, postgreSQL)</div>
-		</div>
-		<div class="educationContainer" />
+	let element: HTMLDivElement;
+
+	const onMouserOver = (e: MouseEvent) => {
+		const distanceInElement = e.pageY - element.offsetTop;
+		distancePercentage = distanceInElement / element.clientHeight;
+	};
+</script>
+
+<div class="cvContainer" on:focus={() => {}} on:mouseover={onMouserOver} bind:this={element}>
+	<div>
+		<div class="headingTextLarge">Lucy Gschwantner</div>
+		<ul>
+			<li class="bodyTextMedium">email: lucygschwantner@gmail.com</li>
+			<li class="bodyTextMedium">github: https://github.com/Jackboxx</li>
+		</ul>
 	</div>
+	<div class="section">
+		<div class="headingTextMedium">Skills</div>
+		<ul>
+			<li class="bodyTextMedium">JavaScript and Typescript programming in Node and React</li>
+			<li class="bodyTextMedium">Experience in creating REST APIs</li>
+			<li class="bodyTextMedium">
+				Rust development, mainly with web sockets and server-client communication
+			</li>
+			<li class="bodyTextMedium">Experienced in creating video games with C#</li>
+			<li class="bodyTextMedium">Knowledge of Java for Android</li>
+			<li class="bodyTextMedium">Know-how for databases (MySQL, postgreSQL)</li>
+		</ul>
+	</div>
+	<div class="section">
+		<div class="headingTextMedium">Work History</div>
+		<ul>
+			<li class="bodyTextMedium">Experienced in creating video games with C#</li>
+			<li class="bodyTextMedium">Knowledge of Java for Android</li>
+			<li class="bodyTextMedium">Know-how for databases (MySQL, postgreSQL)</li>
+		</ul>
+	</div>
+	<div class="section" />
 </div>
 
 <style>
 	* {
-		background-color: red;
 		color: #fff;
+	}
+
+	:root {
+		--gray: #292c30;
 	}
 
 	.cvContainer {
 		width: 60%;
 		min-height: 90vh;
-		display: flex;
+		background: var(--gray);
+		padding: 12px;
+		margin: 0;
+		margin-top: 100px;
+		border-radius: 8px;
+		box-shadow: -3px 3px 4px black;
 	}
 
-	.sidebar {
-		flex: 15%;
-		background: blue;
+	.section {
+		margin-top: 16px;
 	}
 
-	.content {
-		flex: 85%;
+	@media screen and (max-width: 1200px) {
+		.cvContainer {
+			width: 80%;
+		}
 	}
 
-	.point {
-		margin-left: 20px;
+	@media screen and (max-width: 800px) {
+		.cvContainer {
+			width: 100%;
+			border-radius: 0;
+		}
 	}
 </style>
