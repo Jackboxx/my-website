@@ -1,12 +1,8 @@
 <script lang="ts">
-	const positionMap = new Map();
-	positionMap.set('header', { x: 0, y: 0 });
-	positionMap.set('skills', { x: 100, y: 100 });
-	positionMap.set('workHistory', { x: 500, y: -500 });
-	positionMap.set('education', { x: -200, y: 300 });
-
-	let currentPosition: { x: number; y: number } = { x: 0, y: 0 };
-	let cvWidth = 0;
+	const transitionSeconds = 0.5;
+	let currentUrl = '';
+	let transitionClass: 'transition' | '' = '';
+	let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
 	let headingElement: HTMLDivElement;
 	let skillsElement: HTMLDivElement;
@@ -22,28 +18,45 @@
 	};
 
 	const matchElement = (element: HTMLElement) => {
+		transitionClass = 'transition';
 		switch (element) {
 			case headingElement:
-				currentPosition = positionMap.get('header');
+				clearTimeout(timeout);
+				timeout = setTimeout(() => {
+					currentUrl = '';
+					transitionClass = '';
+				}, transitionSeconds * 1000);
 				break;
 			case skillsElement:
-				currentPosition = positionMap.get('skills');
+				clearTimeout(timeout);
+				timeout = setTimeout(() => {
+					currentUrl = '/skills.jpg';
+					transitionClass = '';
+				}, transitionSeconds * 1000);
 				break;
 			case workHistoryElement:
-				currentPosition = positionMap.get('workHistory');
+				clearTimeout(timeout);
+				timeout = setTimeout(() => {
+					currentUrl = './workHistory.jpg';
+					transitionClass = '';
+				}, transitionSeconds * 1000);
 				break;
 			case educationElement:
-				currentPosition = positionMap.get('education');
+				clearTimeout(timeout);
+				timeout = setTimeout(() => {
+					currentUrl = '/education.jpg';
+					transitionClass = '';
+				}, transitionSeconds * 1000);
+				break;
+			default:
+				transitionClass = '';
 				break;
 		}
 	};
 </script>
 
-<div
-	class="container"
-	style="--positionX: {currentPosition.x + cvWidth}px; --positionY: {currentPosition.y}px"
->
-	<div class="cvContainer" bind:clientWidth={cvWidth}>
+<div class="container">
+	<div class="cvContainer">
 		<div
 			class="section"
 			bind:this={headingElement}
@@ -109,6 +122,11 @@
 			</ul>
 		</div>
 	</div>
+
+	<div
+		class="backgroundContainer {transitionClass}"
+		style="--img-url: url({currentUrl}); --transition-duration: {transitionSeconds}s;"
+	/>
 </div>
 
 <style>
@@ -126,22 +144,28 @@
 		min-height: 100vh;
 		display: flex;
 		justify-content: start;
-		background-image: url('/stars.jpg');
+	}
+
+	.backgroundContainer {
+		flex: 50%;
+		background-image: var(--img-url);
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-size: 400%;
-		background-position-x: var(--positionX);
-		background-position-y: var(--positionY);
-		transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+		opacity: 0.5;
+		transition: var(--transition-duration) opacity cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	.backgroundContainer.transition {
+		background-position-y: 100vh;
+		opacity: 0;
+		transition: var(--transition-duration) cubic-bezier(0.165, 0.84, 0.44, 1);
 	}
 
 	.cvContainer {
-		width: 50%;
-		min-height: 90vh;
+		flex: 50%;
+		min-height: 100vh;
 		background: var(--color);
 		padding: 12px;
-		margin: 8px;
-		border-radius: 8px;
 	}
 
 	.section {
