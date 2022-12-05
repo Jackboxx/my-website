@@ -1,12 +1,12 @@
 <script>
 	import { fly } from 'svelte/transition';
 	export let url = '';
-	export let distance = 800;
+	export let distance = 1000;
 </script>
 
 <div
-	in:fly={{ y: distance, duration: 800 }}
-	out:fly={{ y: distance, duration: 800 }}
+	in:fly={{ y: distance, duration: 1200 }}
+	out:fly={{ y: distance, duration: 1200 }}
 	class="imageContainer"
 	style="--img-url: url({url});"
 />
