@@ -1,17 +1,14 @@
 .headingTextLarge {
-    font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
     font-size: 2.5em;
 }
 
 .headingTextMedium {
-    font-family: 'JetBrains Mono', monospace;
     font-weight: 500;
     font-size: 2em;
 }
 
 .bodyTextMedium {
-    font-family: 'JetBrains Mono', monospace;
     font-weight: 500;
     font-size: 1.5em;
 }

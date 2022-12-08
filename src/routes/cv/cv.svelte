@@ -1,105 +1,32 @@
 <script lang="ts">
-	import ImagePanel from './imagePanel.svelte';
+	import ImageSlideShow from './imagePanel.svelte';
 
-	type Panel = {
-		url: string;
-		isShown: boolean;
-	};
-
-	let windowHeight = 0;
-	let transitionDirection = 1;
-
-	const headingUrl = '';
-	const skillsUrl = '/img/skills.jpg';
-	const workHistoryUrl = '/img/workHistory.jpg';
-	const educationUrl = '/img/education.jpg';
-
-	let panels: Panel[] = [
-		{
-			url: headingUrl,
-			isShown: true
-		},
-		{
-			url: skillsUrl,
-			isShown: false
-		},
-		{
-			url: workHistoryUrl,
-			isShown: false
-		},
-		{
-			url: educationUrl,
-			isShown: false
-		}
+	const images = [
+		'/img/heading.jpg',
+		'/img/skills.jpg',
+		'/img/workHistory.jpg',
+		'/img/education.jpg'
 	];
 
-	let headingElement: HTMLDivElement;
-	let skillsElement: HTMLDivElement;
-	let workHistoryElement: HTMLDivElement;
-	let educationElement: HTMLDivElement;
+	let cvElement: HTMLElement;
+	let percentage = 0;
 
-	let currentElement: HTMLElement;
-
-	const onClick = (e: Event) => {
-		matchElement(e.target as HTMLElement);
-	};
-
-	const onMouseEnter = (e: MouseEvent) => {
-		matchElement(e.target as HTMLElement);
-	};
-
-	const matchElement = (element: HTMLElement) => {
-		transitionDirection = element.offsetTop - currentElement?.offsetTop > 0 ? 1 : -1;
-		currentElement = element;
-		switch (element) {
-			case headingElement:
-				panels = panels.map((p) => {
-					return { url: p.url, isShown: p.url === headingUrl };
-				});
-				break;
-			case skillsElement:
-				panels = panels.map((p) => {
-					return { url: p.url, isShown: p.url === skillsUrl };
-				});
-				break;
-			case workHistoryElement:
-				panels = panels.map((p) => {
-					return { url: p.url, isShown: p.url === workHistoryUrl };
-				});
-				break;
-			case educationElement:
-				panels = panels.map((p) => {
-					return { url: p.url, isShown: p.url === educationUrl };
-				});
-				break;
-		}
+	const onMouseMove = (event: MouseEvent) => {
+		const topOffset = cvElement.getBoundingClientRect().top;
+		percentage = (event.clientY - topOffset) / cvElement.clientHeight;
 	};
 </script>
 
-<svelte:window bind:innerHeight={windowHeight} />
-
 <div class="container">
-	<div class="cvContainer">
-		<div
-			class="section"
-			bind:this={headingElement}
-			on:click={onClick}
-			on:keypress={() => undefined}
-			on:mouseenter={onMouseEnter}
-		>
+	<div class="cvContainer" on:mousemove={onMouseMove} bind:this={cvElement}>
+		<div class="section">
 			<div class="headingTextLarge">Lucy Gschwantner</div>
 			<ul>
 				<li class="bodyTextMedium">email: lucygschwantner@gmail.com</li>
 				<li class="bodyTextMedium">github: https://github.com/Jackboxx</li>
 			</ul>
 		</div>
-		<div
-			class="section"
-			bind:this={skillsElement}
-			on:click={onClick}
-			on:keypress={() => undefined}
-			on:mouseenter={onMouseEnter}
-		>
+		<div class="section">
 			<div class="headingTextMedium">Skills</div>
 			<ul>
 				<li class="bodyTextMedium">JavaScript and Typescript programming in Node and React</li>
@@ -112,13 +39,7 @@
 				<li class="bodyTextMedium">Know-how for databases (MySQL, postgreSQL)</li>
 			</ul>
 		</div>
-		<div
-			class="section"
-			bind:this={workHistoryElement}
-			on:click={onClick}
-			on:keypress={() => undefined}
-			on:mouseenter={onMouseEnter}
-		>
+		<div class="section">
 			<div class="headingTextMedium">Work History</div>
 			<ul>
 				<li class="bodyTextMedium">
@@ -131,13 +52,7 @@
 				</li>
 			</ul>
 		</div>
-		<div
-			class="section"
-			bind:this={educationElement}
-			on:click={onClick}
-			on:keypress={() => undefined}
-			on:mouseenter={onMouseEnter}
-		>
+		<div class="section">
 			<div class="headingTextMedium">Education</div>
 			<ul>
 				<li class="bodyTextMedium">2020 - now: HTBLA-Kaindorf (IT branch)</li>
@@ -145,11 +60,9 @@
 			</ul>
 		</div>
 	</div>
-	{#each panels as panel}
-		{#if panel.isShown}
-			<ImagePanel url={panel.url} distance={1.5 * windowHeight * transitionDirection} />
-		{/if}
-	{/each}
+	<div class="slideContainer">
+		<ImageSlideShow {images} {percentage} />
+	</div>
 </div>
 
 <style>
@@ -179,5 +92,15 @@
 
 	.section {
 		margin-top: 16px;
+	}
+
+	@media screen and (max-width: 1000px) {
+		.cvContainer {
+			width: 100%;
+		}
+
+		.slideContainer {
+			display: none;
+		}
 	}
 </style>
