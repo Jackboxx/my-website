@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ImageSlideShow from './imagePanel.svelte';
+	import ImageSlideShow from './imageSlideShow.svelte';
 
 	const images = [
 		'/img/heading.jpg',
