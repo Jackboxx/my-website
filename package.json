@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+        "setup": "lefthook install",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -31,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-vercel": "^1.0.0-next.84"
+		"@sveltejs/adapter-vercel": "^1.0.0-next.84",
+		"lefthook": "^1.2.4"
 	}
 }
