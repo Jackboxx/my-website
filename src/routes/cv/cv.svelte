@@ -23,7 +23,11 @@
 			<div class="headingTextLarge">Lucy Gschwantner</div>
 			<ul>
 				<li class="bodyTextMedium">email: lucygschwantner@gmail.com</li>
-				<li class="bodyTextMedium">github: https://github.com/Jackboxx</li>
+				<li class="bodyTextMedium">
+					github: <a href="https://github.com/Jackboxx" target="_blank" rel="noreferrer"
+						>https://github.com/Jackboxx</a
+					>
+				</li>
 			</ul>
 		</div>
 		<div class="section">
@@ -43,8 +47,14 @@
 			<div class="headingTextMedium">Work History</div>
 			<ul>
 				<li class="bodyTextMedium">
-					September 2022 - now: Software engineer at TimeTac GmbH, working on a React App that
-					intrefaces with an internal API to create a time management plug-in for Jira
+					September 2022 - now: Software engineer at <a
+						href="https://www.timetac.com/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						TimeTac GmbH</a
+					>, working on a React App that intrefaces with an internal API to create a time management
+					plug-in for Jira
 				</li>
 				<li class="bodyTextMedium">
 					July 2022 - August 2022: Employed as a software engineering intern at TimeTac GmbH working
@@ -55,7 +65,11 @@
 		<div class="section">
 			<div class="headingTextMedium">Education</div>
 			<ul>
-				<li class="bodyTextMedium">2020 - now: HTBLA-Kaindorf (IT branch)</li>
+				<li class="bodyTextMedium">
+					2020 - now: <a href="https://www.htl-kaindorf.at/" target="_blank" rel="noreferrer">
+						HTBLA-Kaindorf</a
+					> (IT branch)
+				</li>
 				<li class="bodyTextMedium">2016 - 2020: MS1 Leibnitz</li>
 			</ul>
 		</div>

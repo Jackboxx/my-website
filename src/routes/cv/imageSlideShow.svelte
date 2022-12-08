@@ -20,6 +20,7 @@
 
 <style>
 	.overflowContainer {
+		margin: 0;
 		width: 50%;
 		height: 100%;
 		left: 50%;
@@ -33,7 +34,6 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		opacity: 0.5;
-		filter: blur(3px);
-		transition: 0.5s;
+		filter: blur(5px);
 	}
 </style>
