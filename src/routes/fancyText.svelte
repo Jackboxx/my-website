@@ -21,7 +21,7 @@
 <div
 	bind:this={containerParent}
 	class="flex justify-center items-center w-full h-full bg-zinc-800"
-	style="--distance: {distance}px; --degree: 5deg"
+	style="--distance: {Math.max(distance, 50)}px; --degree: 5deg"
 >
 	<div class="flex absolute fancyContainerTop" bind:this={containerChild}>
 		{#each phrase.split('') as letter}
