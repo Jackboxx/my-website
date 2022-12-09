@@ -46,11 +46,11 @@
 	}
 
 	div:hover > .fancyContainerTop {
-		transform: rotate(var(--degree)) translateX(var(--distance));
+		transform: rotate(var(--degree)) translateX(calc(var(--distance) * -1));
 	}
 
 	div:hover > .fancyContainerBottom {
-		transform: rotate(var(--degree)) translateX(calc(var(--distance) * -1));
+		transform: rotate(var(--degree)) translateX(var(--distance));
 	}
 
 	.fancyLetterTop {
