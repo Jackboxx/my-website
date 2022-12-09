@@ -1,16 +1,29 @@
 <script lang="ts">
-	export let phrase = 'fancy text';
+	export let phrase = 'Lucy Gschwantner';
 
-	let screenWidth = Number.MAX_VALUE;
+	let distance = 0;
+
+	let containerParent: HTMLElement;
+	let containerChild: HTMLElement;
+
+	const calculateDistance = (inner: HTMLElement, outer: HTMLElement) => {
+		const outerLeft = outer?.getBoundingClientRect().left;
+		const innerLeft = inner?.getBoundingClientRect().left;
+
+		distance = Math.min(innerLeft - outerLeft, 500);
+	};
+
+	$: calculateDistance(containerChild, containerParent);
 </script>
 
-<svelte:window bind:innerWidth={screenWidth} />
+<svelte:window on:resize={() => calculateDistance(containerChild, containerParent)} />
 
 <div
-	class="flex justify-center items-center w-full h-full bg-gray-800 duration-150 hover:bg-gray-900"
-	style="--distance: {Math.min(300, screenWidth / 3)}px; --degree: 15deg"
+	bind:this={containerParent}
+	class="flex justify-center items-center w-full h-full bg-zinc-800"
+	style="--distance: {distance}px; --degree: 5deg"
 >
-	<div class="flex absolute fancyContainerTop">
+	<div class="flex absolute fancyContainerTop" bind:this={containerChild}>
 		{#each phrase.split('') as letter}
 			{#if letter === ' '}
 				<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterTop">&nbsp;</div>
