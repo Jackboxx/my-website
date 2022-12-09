@@ -5,13 +5,15 @@
 	import Separator from './separator.svelte';
 </script>
 
-<div class="m-8 h-48 lg:h-64 duration-150">
-	<FancyText />
+<div class="flex justify-center">
+	<div class="m-8 sm:m-16 h-48 w-full max-w-2xl lg:h-64">
+		<FancyText />
+	</div>
 </div>
 
 <div class="bg-zinc-800 h-32" />
 
-<div class="m-8 p-8 sm:p-16 bg-zinc-800">
+<div class="m-8 p-8 sm:m-16 sm:p-16 bg-zinc-800">
 	<Section
 		header={'Skills:'}
 		points={[
