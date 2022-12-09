@@ -6,14 +6,14 @@
 </script>
 
 <div class="flex justify-center">
-	<div class="m-8 sm:m-16 h-48 w-full max-w-2xl lg:h-64">
+	<div class="shadow-xl m-8 sm:m-16 h-48 w-full max-w-2xl lg:h-64">
 		<FancyText />
 	</div>
 </div>
 
 <div class="bg-zinc-800 h-32" />
 
-<div class="m-8 p-8 sm:m-16 sm:p-16 bg-zinc-800">
+<div class="shadow-xl m-8 p-8 sm:m-16 sm:p-16 bg-zinc-800">
 	<Separator />
 
 	<Section
