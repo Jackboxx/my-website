@@ -11,7 +11,7 @@
 
 <div class="bg-zinc-800 h-32" />
 
-<div class="m-8 p-16 bg-zinc-800">
+<div class="m-8 p-8 sm:p-16 bg-zinc-800">
 	<Section
 		header={'Skills:'}
 		points={[
