@@ -2,8 +2,8 @@ pre-commit:
   parallel: true
   commands:
     check:
-      glob: "*.{js,ts,jsx,tsx}"
+      glob: '*.{js,ts,jsx,tsx}'
       run: npm run check {staged_files}
     lint:
-      glob: "*.{js,ts,jsx,tsx}"
+      glob: '*.{js,ts,jsx,tsx}'
       run: npm run lint {staged_files}
