@@ -2,4 +2,6 @@
 	import FancyText from 'src/fancyText.svelte';
 </script>
 
-<FancyText />
+<div class="w-screen h-screen">
+	<FancyText />
+</div>

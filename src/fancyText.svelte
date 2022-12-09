@@ -7,15 +7,15 @@
 <svelte:window bind:innerWidth={screenWidth} />
 
 <div
-	class="flex justify-center items-center w-screen h-screen bg-gray-800 duration-150 hover:bg-gray-900"
+	class="flex justify-center items-center w-full h-full bg-gray-800 duration-150 hover:bg-gray-900"
 	style="--distance: {Math.min(300, screenWidth / 3)}px; --degree: 15deg"
 >
 	<div class="flex absolute fancyContainerTop">
 		{#each phrase.split('') as letter}
 			{#if letter === ' '}
-				<div class="text-center font-bold fancyLetterTop">&nbsp;</div>
+				<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterTop">&nbsp;</div>
 			{:else}
-				<div class="text-center font-bold fancyLetterTop">{letter}</div>
+				<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterTop">{letter}</div>
 			{/if}
 		{/each}
 	</div>
@@ -23,9 +23,9 @@
 	<div class="flex absolute fancyContainerBottom">
 		{#each phrase.split('') as letter}
 			{#if letter === ' '}
-				<div class="text-center font-bold fancyLetterBottom">&nbsp;</div>
+				<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterBottom">&nbsp;</div>
 			{:else}
-				<div class="text-center font-bold fancyLetterBottom">{letter}</div>
+				<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterBottom">{letter}</div>
 			{/if}
 		{/each}
 	</div>
@@ -66,6 +66,5 @@
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		font-size: 6em;
 	}
 </style>
