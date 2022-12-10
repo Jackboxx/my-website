@@ -76,7 +76,8 @@
 <style>
 	.cont {
 		user-select: none;
-		clip-path: fill-box;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 	}
 
 	.cont2 {

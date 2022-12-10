@@ -20,7 +20,7 @@
 		header={'Skills:'}
 		points={[
 			'JavaScript and Typescript programming in Node and React',
-			'Experience in creating REST APIs',
+			'Experience in creating and documenting REST APIs',
 			'Rust development, mainly with web sockets and server-cdivent communication',
 			'Experienced in creating video games with C#',
 			'Knowledge of Java for Android',
