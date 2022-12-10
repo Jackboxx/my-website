@@ -118,7 +118,7 @@
 	}
 
 	.fancyLetterBottom {
-		background: linear-gradient(to bottom, transparent 55%, var(--textColor) 50%);
+		background: linear-gradient(to bottom, transparent 55%, var(--textColor) 45%);
 	}
 
 	.fancyLetterTop,
