@@ -21,7 +21,7 @@
 
 <div
 	bind:this={containerParent}
-	class="relative w-full h-full bg-zinc-800"
+	class="relative w-full h-full bg-zinc-800 rounded"
 	style="--distance: {Math.max(distance * 1.6, 50)}px; --degree: 5deg;"
 >
 	<div class="z-20 absolute w-full h-full flex justify-center items-center cont">

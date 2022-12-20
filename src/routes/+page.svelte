@@ -1,5 +1,6 @@
 <script>
 	import FancyText from './fancyText.svelte';
+	import Header from './header.svelte';
 	import Project from './project.svelte';
 
 	import Section from './section.svelte';
@@ -12,13 +13,9 @@
 	</div>
 </div>
 
-<div class="bg-zinc-800 h-16 sm:h-32" />
+<Header text={'CV'} />
 
-<Project />
-
-<div class="bg-zinc-800 h-16 sm:h-32" />
-
-<div class="shadow-xl m-8 p-8 sm:m-16 sm:p-16 bg-zinc-800">
+<div class="shadow-xl m-8 p-8 sm:m-16 sm:p-16 bg-zinc-800 rounded">
 	<Separator />
 
 	<Section
@@ -53,4 +50,8 @@
 	/>
 </div>
 
-<div class="bg-zinc-800 h-32" />
+<Header text={'Projects'} />
+
+<div class="w-100 flex h-64 justify-around m-8 sm:m-16">
+	<Project title={'Blog Page'} link={'https://lucys-terminal.com'} />
+</div>
