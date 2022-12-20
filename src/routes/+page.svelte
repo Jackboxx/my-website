@@ -1,5 +1,6 @@
 <script>
 	import FancyText from './fancyText.svelte';
+	import Project from './project.svelte';
 
 	import Section from './section.svelte';
 	import Separator from './separator.svelte';
@@ -11,7 +12,11 @@
 	</div>
 </div>
 
-<div class="bg-zinc-800 h-32" />
+<div class="bg-zinc-800 h-16 sm:h-32" />
+
+<Project />
+
+<div class="bg-zinc-800 h-16 sm:h-32" />
 
 <div class="shadow-xl m-8 p-8 sm:m-16 sm:p-16 bg-zinc-800">
 	<Separator />
