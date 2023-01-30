@@ -8,7 +8,9 @@
 </script>
 
 <div class="snap-mandatory snap-y overflow-y-scroll h-screen ">
-	<div class="snap-center snap-always h-full flex items-center justify-center h-full">
+	<div
+		class="snap-center snap-always h-full flex items-center justify-center h-full overflow-x-hidden"
+	>
 		<FancyText />
 	</div>
 
