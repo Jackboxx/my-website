@@ -1,1 +1,1 @@
-<div class="boder-solid border-2 border-white m-4" />
+<div class="boder-solid border-2 border-orange-600 m-4" />
