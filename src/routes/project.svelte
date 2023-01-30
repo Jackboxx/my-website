@@ -5,7 +5,7 @@
 </script>
 
 <a
-	class="project flex items-center justify-center w-96 h-96 bg-transparent
+	class="project flex items-center justify-center h-64 w-64 sm:w-96 sm:h-96 bg-transparent
     duration-300 cursor-pointer relative rounded hover:shadow-[1px_1px_1px_1px] hover:shadow-orange-600"
 	href={link}
 >
