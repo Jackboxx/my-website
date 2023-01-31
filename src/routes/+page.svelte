@@ -7,19 +7,15 @@
 	import Separator from './separator.svelte';
 </script>
 
-<div class="snap-mandatory snap-y overflow-y-scroll h-screen ">
-	<div
-		class="snap-center snap-always h-full flex items-center justify-center h-full overflow-x-hidden"
-	>
+<div class="h-screen ">
+	<div class="stars flex items-center justify-center h-full overflow-x-hidden">
 		<FancyText />
 	</div>
 
-	<div class="snap-center snap-always h-full">
-		<Header text={'CV'} />
-	</div>
+	<Header text={'CV'} />
 
-	<div class="snap-center snap-always h-full flex item-center justify-center">
-		<div class="shadow-xl m-8 p-8 sm:m-16 sm:p-16 bg-neutral-900 rounded overflow-y-auto">
+	<div class="flex item-center justify-center">
+		<div class="shadow-xl m-8 p-8 sm:m-16 sm:p-16 bg-neutral-800 rounded overflow-y-auto">
 			<Separator />
 
 			<Section
@@ -56,11 +52,9 @@
 		</div>
 	</div>
 
-	<div class="snap-center snap-always h-full">
-		<Header text={'Projects'} />
-	</div>
+	<Header text={'Projects'} />
 
-	<div class="snap-center snap-always h-full">
+	<div class="h-[50%]">
 		<div class="w-100 flex flex-wrap h-full justify-around items-center m-8 sm:m-16 overflow-auto">
 			<Project
 				title={'Personal blog website'}
@@ -75,3 +69,81 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.stars {
+		background-image: -webkit-gradient(
+				radial,
+				50% 50%,
+				2,
+				50% 50%,
+				4,
+				from(white),
+				color-stop(0.1, rgba(248, 255, 128, 0.5)),
+				to(transparent)
+			),
+			-webkit-gradient(radial, 50% 50%, 1, 50% 50%, 3, from(white), color-stop(0.1, rgba(255, 186, 170, 0.4)), to(transparent)),
+			-webkit-gradient(radial, 50% 50%, 1, 50% 50%, 4, from(rgba(255, 255, 255, 0.9)), color-stop(0.05, rgba(251, 255, 186, 0.3)), to(transparent)),
+			-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3, from(rgba(255, 255, 255, 0.4)), color-stop(0.03, rgba(253, 255, 219, 0.2)), to(transparent));
+
+		background-image: -moz-radial-gradient(
+				circle,
+				#fff 2px,
+				rgba(248, 255, 128, 0.5) 2px,
+				transparent 5px
+			),
+			-moz-radial-gradient(circle, #fff 1px, rgba(255, 186, 170, 0.4) 3px, transparent 3px),
+			-moz-radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, rgba(251, 255, 186, 0.3) 2px, transparent
+						4px),
+			-moz-radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, rgba(251, 255, 186, 0.3) 2px, transparent
+						4px),
+			-moz-radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(253, 255, 219, 0.2) 1px, transparent
+						3px);
+
+		background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+		background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+
+		animation-name: movement;
+		animation-duration: 15s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		-moz-animation-name: movement;
+		-moz-animation-duration: 15;
+		-moz-animation-timing-function: linear;
+		-moz-animation-iteration-count: infinite;
+		-webkit-animation-name: movement;
+		-webkit-animation-duration: 15s;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+	}
+
+	@keyframes movement {
+		from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+		}
+
+		to {
+			background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+		}
+	}
+
+	@-moz-keyframes movement {
+		from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+		}
+
+		to {
+			background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+		}
+	}
+
+	@-webkit-keyframes movement {
+		from {
+			background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+		}
+
+		to {
+			background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+		}
+	}
+</style>
