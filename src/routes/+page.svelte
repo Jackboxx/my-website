@@ -25,7 +25,6 @@
 					'Experience in creating and documenting REST APIs',
 					'Rust development with web sockets and server-client communication, CLI apps, and REST APIs',
 					'Experienced in creating video games with C#',
-					'Knowledge of Java for Android',
 					'Intermidiate database Know-how (mainly MySQL, postgreSQL)'
 				]}
 			/>
