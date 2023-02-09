@@ -23,10 +23,10 @@
 				points={[
 					'JavaScript and Typescript programming in Node and React',
 					'Experience in creating and documenting REST APIs',
-					'Rust development, mainly with web sockets and server-cdivent communication',
+					'Rust development with web sockets and server-client communication, CLI apps, and REST APIs',
 					'Experienced in creating video games with C#',
 					'Knowledge of Java for Android',
-					'Know-how for databases (MySQL, postgreSQL)'
+					'Intermidiate database Know-how (mainly MySQL, postgreSQL)'
 				]}
 			/>
 
