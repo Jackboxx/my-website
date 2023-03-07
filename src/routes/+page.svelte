@@ -7,7 +7,7 @@
 	import Separator from './separator.svelte';
 </script>
 
-<div class="h-screen ">
+<div class="h-screen">
 	<div class="stars flex items-center justify-center h-full overflow-x-hidden">
 		<FancyText />
 	</div>
@@ -53,19 +53,17 @@
 
 	<Header text={'Projects'} />
 
-	<div class="h-[50%]">
-		<div class="w-100 flex flex-wrap h-full justify-around items-center m-8 sm:m-16 overflow-auto">
-			<Project
-				title={'Personal blog website'}
-				link={'https://lucys-terminal.com'}
-				image={'/img/blog.png'}
-			/>
-			<Project
-				title={'Vocal, a CLI audio player'}
-				link={'https://github.com/Jackboxx/vocal'}
-				image={'/img/vocal.png'}
-			/>
-		</div>
+	<div class="w-100 flex flex-wrap gap-8 justify-around items-center overflow-hidden">
+		<Project
+			title={'Personal blog website'}
+			link={'https://lucys-terminal.com'}
+			image={'/img/blog.png'}
+		/>
+		<Project
+			title={'Vocal, a CLI audio player'}
+			link={'https://github.com/Jackboxx/vocal'}
+			image={'/img/vocal.png'}
+		/>
 	</div>
 </div>
 
