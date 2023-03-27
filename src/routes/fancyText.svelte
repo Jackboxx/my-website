@@ -20,33 +20,33 @@
 
 <svelte:window on:resize={() => calculateDistance(containerChild, containerParent)} />
 
-<div class="m-8 sm:m-16 h-48 w-full max-w-2xl lg:h-64">
+<div class="m-8 h-48 w-full max-w-2xl sm:m-16 lg:h-64">
 	<div
 		bind:this={containerParent}
-		class="relative w-full h-full bg-neutral-800 rounded"
+		class="relative h-full w-full rounded bg-neutral-800"
 		style="--distance: {Math.max(distance * 1.6, 50)}px; --degree: 5deg;"
 	>
-		<div class="z-20 absolute w-full h-full flex justify-center items-center cont">
+		<div class="cont absolute z-20 flex h-full w-full items-center justify-center">
 			<div
-				class="flex absolute fancyContainerTop"
+				class="fancyContainerTop absolute flex"
 				style="--textColor: {textColor};"
 				bind:this={containerChild}
 			>
 				{#each phrase.split('') as letter}
 					{#if letter === ' '}
-						<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterTop">&nbsp;</div>
+						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">&nbsp;</div>
 					{:else}
-						<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterTop">{letter}</div>
+						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">{letter}</div>
 					{/if}
 				{/each}
 			</div>
 
-			<div class="flex absolute fancyContainerBottom" style="--textColor: {textColor};">
+			<div class="fancyContainerBottom absolute flex" style="--textColor: {textColor};">
 				{#each phrase.split('') as letter}
 					{#if letter === ' '}
-						<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterBottom">&nbsp;</div>
+						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">&nbsp;</div>
 					{:else}
-						<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterBottom">
+						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">
 							{letter}
 						</div>
 					{/if}
@@ -54,23 +54,23 @@
 			</div>
 		</div>
 
-		<div class="cont2 z-10 absolute w-full h-full flex justify-center items-center">
-			<div class="flex absolute fancyContainerTop" style="--textColor: {textClipColor};">
+		<div class="cont2 absolute z-10 flex h-full w-full items-center justify-center">
+			<div class="fancyContainerTop absolute flex" style="--textColor: {textClipColor};">
 				{#each phrase.split('') as letter}
 					{#if letter === ' '}
-						<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterTop">&nbsp;</div>
+						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">&nbsp;</div>
 					{:else}
-						<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterTop">{letter}</div>
+						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">{letter}</div>
 					{/if}
 				{/each}
 			</div>
 
-			<div class="flex absolute fancyContainerBottom" style="--textColor: {textClipColor};">
+			<div class="fancyContainerBottom absolute flex" style="--textColor: {textClipColor};">
 				{#each phrase.split('') as letter}
 					{#if letter === ' '}
-						<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterBottom">&nbsp;</div>
+						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">&nbsp;</div>
 					{:else}
-						<div class="text-4xl sm:text-6xl text-center font-bold fancyLetterBottom">
+						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">
 							{letter}
 						</div>
 					{/if}
