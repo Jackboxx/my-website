@@ -9,9 +9,13 @@
     duration-300 sm:h-96 sm:w-96"
 	href={link}
 >
-	<img src={image} class="h-full w-full rounded-2xl object-cover duration-300" alt="Project" />
+	<img
+		src={image}
+		class="h-full w-full rounded-2xl object-cover duration-300"
+		alt="Project"
+	/>
 	<div
-		class="pointer-events-none absolute top-0 left-0 flex h-full w-full items-center 
+		class="pointer-events-none absolute top-0 left-0 flex h-full w-full items-center
         justify-center p-8 text-center text-4xl
         font-bold text-white"
 	>

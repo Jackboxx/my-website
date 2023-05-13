@@ -90,10 +90,10 @@
 				transparent 5px
 			),
 			-moz-radial-gradient(circle, #fff 1px, rgba(255, 186, 170, 0.4) 3px, transparent 3px),
-			-moz-radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, rgba(251, 255, 186, 0.3) 2px, transparent
-						4px),
-			-moz-radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, rgba(251, 255, 186, 0.3) 2px, transparent
-						4px),
+			-moz-radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, rgba(251, 255, 186, 0.3)
+						2px, transparent 4px),
+			-moz-radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, rgba(251, 255, 186, 0.3)
+						2px, transparent 4px),
 			-moz-radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(253, 255, 219, 0.2) 1px, transparent
 						3px);
 

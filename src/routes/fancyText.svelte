@@ -34,9 +34,13 @@
 			>
 				{#each phrase.split('') as letter}
 					{#if letter === ' '}
-						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">&nbsp;</div>
+						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">
+							&nbsp;
+						</div>
 					{:else}
-						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">{letter}</div>
+						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">
+							{letter}
+						</div>
 					{/if}
 				{/each}
 			</div>
@@ -44,7 +48,9 @@
 			<div class="fancyContainerBottom absolute flex" style="--textColor: {textColor};">
 				{#each phrase.split('') as letter}
 					{#if letter === ' '}
-						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">&nbsp;</div>
+						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">
+							&nbsp;
+						</div>
 					{:else}
 						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">
 							{letter}
@@ -58,17 +64,26 @@
 			<div class="fancyContainerTop absolute flex" style="--textColor: {textClipColor};">
 				{#each phrase.split('') as letter}
 					{#if letter === ' '}
-						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">&nbsp;</div>
+						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">
+							&nbsp;
+						</div>
 					{:else}
-						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">{letter}</div>
+						<div class="fancyLetterTop text-center text-4xl font-bold sm:text-6xl">
+							{letter}
+						</div>
 					{/if}
 				{/each}
 			</div>
 
-			<div class="fancyContainerBottom absolute flex" style="--textColor: {textClipColor};">
+			<div
+				class="fancyContainerBottom absolute flex"
+				style="--textColor: {textClipColor};"
+			>
 				{#each phrase.split('') as letter}
 					{#if letter === ' '}
-						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">&nbsp;</div>
+						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">
+							&nbsp;
+						</div>
 					{:else}
 						<div class="fancyLetterBottom text-center text-4xl font-bold sm:text-6xl">
 							{letter}

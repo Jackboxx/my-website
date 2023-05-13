@@ -5,7 +5,10 @@ import path from 'path';
 const config = {
 	plugins: [sveltekit()],
 	resolve: {
-		alias: [{ find: 'src', replacement: path.resolve(__dirname, 'src') }]
+		alias: [
+			{ find: 'src', replacement: path.resolve(__dirname, 'src') },
+			{ find: '@lib', replacement: path.resolve(__dirname, 'src/lib') }
+		]
 	},
 	server: {
 		host: 'localhost',
