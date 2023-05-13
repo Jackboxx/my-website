@@ -10,12 +10,6 @@
 	let shootingStars: { speed: number }[] = [];
 
 	onMount(() => {
-		shootingStars = [
-			{ speed: Math.floor(Math.random() * 3 + 5) },
-			{ speed: Math.floor(Math.random() * 3 + 5) },
-			{ speed: Math.floor(Math.random() * 3 + 5) }
-		];
-
 		const resulutions = [400, 3840];
 		const startCounts = [6, 24];
 
@@ -24,12 +18,16 @@
 				(resulutions[1] - resulutions[0]) +
 				startCounts[0]
 		);
+
+		shootingStars = Array.from({ length: Math.round(maxStars / 3) }, () => {
+			return { speed: Math.floor(Math.random() * 3 + 5) };
+		});
 	});
 
 	setInterval(() => {
 		if (shootingStars.length >= maxStars) return;
 		shootingStars = [...shootingStars, { speed: Math.floor(Math.random() * 3 + 5) }];
-	}, 2000);
+	}, 1200);
 </script>
 
 <div
