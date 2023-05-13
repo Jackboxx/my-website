@@ -3,7 +3,7 @@
 	import FancyText from './fancyText.svelte';
 	import ShootingStar from './shootingStar.svelte';
 
-	export let maxStars = 12;
+	let maxStars = 12;
 	let screenW: number;
 	let screenH: number;
 
@@ -15,6 +15,15 @@
 			{ speed: Math.floor(Math.random() * 3 + 5) },
 			{ speed: Math.floor(Math.random() * 3 + 5) }
 		];
+
+		const resulutions = [400, 3840];
+		const startCounts = [6, 24];
+
+		maxStars = Math.round(
+			((screenW - resulutions[0]) * (startCounts[1] - startCounts[0])) /
+				(resulutions[1] - resulutions[0]) +
+				startCounts[0]
+		);
 	});
 
 	setInterval(() => {
