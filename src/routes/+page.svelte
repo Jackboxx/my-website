@@ -7,6 +7,7 @@
 
 <WelcomeHeader />
 
+<Header text={'About Me'} />
 <AboutMe />
 
 <div class="min-h-screen">

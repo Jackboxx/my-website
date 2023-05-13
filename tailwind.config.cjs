@@ -4,10 +4,10 @@ module.exports = {
 	theme: {
 		colors: {
 			text: { dark: '#ffffff', light: '#000000' },
-			bg: { light: '#f6f5f4', dark: '#101528' },
-			primary: { light: '#ff533f', dark: '#ff533f' },
-			secondary: { light: '#2d263d', dark: '#2d263d' },
-			accent: { light: '#3febff', dark: '#3febff' }
+			bg: { light: '#f6f5f4', dark: '#0a0e19' },
+			primary: { light: '#565add', dark: '#565add' },
+			secondary: { light: '#d1d1f7', dark: '#d1d1f7' },
+			accent: { light: '#9f92ec', dark: '#9f92ec' }
 		},
 		extend: {
 			width: {

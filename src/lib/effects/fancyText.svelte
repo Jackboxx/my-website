@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let phrase = 'Lucy Gschwantner';
 	export let textColor = '#ffffff';
-	export let textClipColor = '#ff533f';
+	export let textClipColor = '#9f92ec';
 
 	let distance = 0;
 
