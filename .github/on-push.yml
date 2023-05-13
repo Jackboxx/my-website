@@ -1,0 +1,30 @@
+name: Verify
+on:
+  push:
+    branches: [main]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: '>=16.14.0'
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install
+        run: npm ci
+
+      - name: Format
+        run: npm run format
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Check
+        run: npm run check
+
+      - name: Build
+        run: npm run build
