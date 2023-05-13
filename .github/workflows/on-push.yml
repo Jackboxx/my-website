@@ -18,7 +18,7 @@ jobs:
         run: npm ci
 
       - name: Format
-        run: npm run format
+        run: npm run check-format
 
       - name: Lint
         run: npm run lint
