@@ -1,4 +1,4 @@
-<div class="flex h-full w-full flex-col gap-1 sm:gap-2 md:gap-3">
+<div class="flex h-full w-full max-w-[1200px] flex-col gap-1 sm:gap-2 md:gap-3">
 	<div class="flex gap-1 sm:gap-2 md:gap-3">
 		<div class="aspect-video w-[68%] rounded bg-primary-light dark:bg-primary-dark" />
 		<div class="flex w-[15%] flex-col gap-1 sm:gap-2 md:gap-3">

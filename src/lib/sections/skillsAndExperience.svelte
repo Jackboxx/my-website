@@ -1,5 +1,5 @@
 <script>
-	import ShapesHorizontal from '$lib/effects/shapesHorizontal.svelte';
+	import ShapesVertical from '$lib/effects/shapesVertical.svelte';
 </script>
 
 <div class="m-16 mt-2 p-4 shadow-2xl">
@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="flex w-full justify-end lg:w-[50%]">
-			<ShapesHorizontal />
+			<ShapesVertical />
 		</div>
 	</div>
 </div>

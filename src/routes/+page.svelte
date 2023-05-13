@@ -3,6 +3,7 @@
 	import Header from '$lib/page/header.svelte';
 	import Project from '$lib/page/project.svelte';
 	import AboutMe from '$lib/sections/aboutMe.svelte';
+	import SkillsAndExperience from '$lib/sections/skillsAndExperience.svelte';
 </script>
 
 <WelcomeHeader />
@@ -26,5 +27,8 @@
 		/>
 	</div>
 </div>
+
 <Header text={'Skills & Experience'} />
+<SkillsAndExperience />
+
 <Header text={'Contact Me'} />
