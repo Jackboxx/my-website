@@ -1,10 +1,9 @@
 <script>
-	import FancyText from './fancyText.svelte';
-	import Header from './header.svelte';
-	import Project from './project.svelte';
-
-	import Section from './section.svelte';
-	import Separator from './separator.svelte';
+	import FancyText from '$lib/effects/fancyText.svelte';
+	import Header from '$lib/page/header.svelte';
+	import Project from '$lib/page/project.svelte';
+	import Section from '$lib/page/section.svelte';
+	import Separator from '$lib/utils/separator.svelte';
 </script>
 
 <div class="h-screen">
@@ -15,7 +14,7 @@
 	<Header text={'CV'} />
 
 	<div class="item-center flex justify-center">
-		<div class="m-8 overflow-y-auto rounded bg-neutral-800 p-8 shadow-xl sm:m-16 sm:p-16">
+		<div class="m-8 overflow-y-auto rounded bg-secondary p-8 shadow-xl sm:m-16 sm:p-16">
 			<Separator />
 
 			<Section

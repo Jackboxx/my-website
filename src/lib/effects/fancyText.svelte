@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let phrase = 'Lucy Gschwantner';
-	export let textColor = '#fff';
-	export let textClipColor = '#ea580c';
+	export let textColor = '#ffffff';
+	export let textClipColor = '#ff533f';
 
 	let distance = 0;
 
@@ -23,7 +23,7 @@
 <div class="m-8 h-48 w-full max-w-2xl sm:m-16 lg:h-64">
 	<div
 		bind:this={containerParent}
-		class="relative h-full w-full rounded bg-neutral-800"
+		class="relative h-full w-full rounded bg-bg-light dark:bg-bg-dark"
 		style="--distance: {Math.max(distance * 1.6, 50)}px; --degree: 5deg;"
 	>
 		<div class="cont absolute z-20 flex h-full w-full items-center justify-center">
