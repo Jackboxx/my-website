@@ -6,7 +6,7 @@
 <div class="text-xl text-text-dark lg:text-3xl">{header}</div>
 <div class="flex flex-col sm:items-center">
 	{#each points as point}
-		<div class="m-2 text-left text-lg sm:-w-half-full lg:text-xl">
+		<div class="sm:-w-[50%] m-2 text-left text-lg lg:text-xl">
 			{point}
 		</div>
 	{/each}

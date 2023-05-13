@@ -9,14 +9,7 @@ module.exports = {
 			secondary: { light: '#d1d1f7', dark: '#d1d1f7' },
 			accent: { light: '#9f92ec', dark: '#9f92ec' }
 		},
-		extend: {
-			width: {
-				'-half-full': '50%'
-			},
-			height: {
-				'-half-full': '50%'
-			}
-		}
+		extend: {}
 	},
 	plugins: []
 };
