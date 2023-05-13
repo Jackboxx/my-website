@@ -3,8 +3,9 @@
 </script>
 
 <div
-	class="box flex h-[350px] items-center justify-center bg-gradient-to-r from-primary
-    to-accent sm:h-[500px]"
+	class="box flex h-[350px] items-center justify-center bg-gradient-to-r
+    from-primary-light to-accent-light
+    dark:from-primary-dark dark:to-accent-dark sm:h-[500px]"
 >
 	<span class="select-none text-center text-6xl font-bold">{text}</span>
 </div>

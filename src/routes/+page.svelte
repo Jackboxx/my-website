@@ -11,7 +11,9 @@
 <Header text={'CV'} />
 
 <div class="item-center flex justify-center">
-	<div class="m-8 overflow-y-auto rounded bg-secondary p-8 shadow-xl sm:m-16 sm:p-16">
+	<div
+		class="m-8 overflow-y-auto rounded bg-secondary-light p-8 shadow-xl dark:bg-secondary-dark sm:m-16 sm:p-16"
+	>
 		<Separator />
 
 		<Section

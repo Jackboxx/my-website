@@ -92,12 +92,12 @@
 <div
 	on:mouseover={onMouseDown}
 	on:focus={undefined}
-	class="absolute z-20 h-[200px] w-[200px]"
+	class="absolute h-[200px] w-[200px]"
 	style={`top: ${y}px; left: ${x}px`}
 >
 	{#each Array(trail.length) as _, i}
 		<div
-			class="shootingStar absolute z-10 h-[5px] w-[5px] rounded-[50%]"
+			class="shootingStar absolute h-[5px] w-[5px] rounded-[50%]"
 			style={`top: ${trail[i].y - y + 100}px; left: ${
 				trail[i].x - x + 100
 			}px; --shadow-size: 4px; transform: scale(${
