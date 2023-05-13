@@ -7,3 +7,6 @@ pre-commit:
     lint:
       glob: '*.{js,ts,jsx,tsx}'
       run: npm run lint {staged_files}
+    check-format:
+      glob: '*.{js,ts,jsx,tsx}'
+      run: npm run check-format {staged_files}
