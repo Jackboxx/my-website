@@ -7,15 +7,15 @@
 	import Separator from './separator.svelte';
 </script>
 
-<div class="h-screen ">
-	<div class="stars flex items-center justify-center h-full overflow-x-hidden">
+<div class="h-screen">
+	<div class="stars flex h-full items-center justify-center overflow-x-hidden">
 		<FancyText />
 	</div>
 
 	<Header text={'CV'} />
 
-	<div class="flex item-center justify-center">
-		<div class="shadow-xl m-8 p-8 sm:m-16 sm:p-16 bg-neutral-800 rounded overflow-y-auto">
+	<div class="item-center flex justify-center">
+		<div class="m-8 overflow-y-auto rounded bg-neutral-800 p-8 shadow-xl sm:m-16 sm:p-16">
 			<Separator />
 
 			<Section
@@ -53,19 +53,17 @@
 
 	<Header text={'Projects'} />
 
-	<div class="h-[50%]">
-		<div class="w-100 flex flex-wrap h-full justify-around items-center m-8 sm:m-16 overflow-auto">
-			<Project
-				title={'Personal blog website'}
-				link={'https://lucys-terminal.com'}
-				image={'/img/blog.png'}
-			/>
-			<Project
-				title={'Vocal, a CLI audio player'}
-				link={'https://github.com/Jackboxx/vocal'}
-				image={'/img/vocal.png'}
-			/>
-		</div>
+	<div class="w-100 m-8 flex flex-wrap items-center justify-around gap-8">
+		<Project
+			title={'Personal blog website'}
+			link={'https://lucys-terminal.com'}
+			image={'/img/blog.png'}
+		/>
+		<Project
+			title={'Vocal, a CLI audio player'}
+			link={'https://github.com/Jackboxx/vocal'}
+			image={'/img/vocal.png'}
+		/>
 	</div>
 </div>
 
