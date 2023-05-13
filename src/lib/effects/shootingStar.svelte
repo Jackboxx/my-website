@@ -42,7 +42,7 @@
 		y += speed;
 		updateTrail();
 
-		if (x < 0 || y > parentHeightPx) {
+		if (x < -500 || y > parentHeightPx) {
 			x = Math.floor(Math.random() * 2 * parentWidthPx);
 			y = Math.floor(
 				Math.random() * parentHeightPx * 2 - parentHeightPx * (x >= parentWidthPx ? 1 : 2)
