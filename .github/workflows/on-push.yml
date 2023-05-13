@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
 jobs:
-  backend:
+  basic-checks:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
