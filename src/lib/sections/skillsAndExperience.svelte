@@ -2,7 +2,7 @@
 	import ShapesVertical from '$lib/effects/shapesVertical.svelte';
 </script>
 
-<div class="m-16 mt-2 p-4 shadow-2xl">
+<div class="m-4 mt-2 p-4 shadow-2xl lg:m-16">
 	<div class="flex flex-grow flex-col items-start justify-between lg:flex-row">
 		<div class="flex w-full justify-center lg:w-[50%]">
 			<div
