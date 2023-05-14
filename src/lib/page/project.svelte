@@ -13,13 +13,7 @@
 		class="aspect-[4/3] w-[40%] min-w-[300px] rounded bg-bg-light p-4 text-lg
             text-text-light shadow-2xl dark:bg-bg-dark dark:text-text-dark 2xl:text-3xl"
 	>
-		Magna eget est lorem ipsum dolor sit. Proin fermentum leo vel orci porta. Pellentesque
-		habitant morbi tristique senectus et. Curabitur gravida arcu ac tortor. Donec et odio
-		pellentesque diam volutpat commodo sed egestas egestas. Quis hendrerit dolor magna
-		eget est lorem ipsum dolor. Tempor id eu nisl nunc. Metus dictum at tempor commodo
-		ullamcorper a lacus vestibulum sed. Ultrices gravida dictum fusce ut placerat orci
-		nulla. Ultrices dui sapien eget mi proin sed libero. Non blandit massa enim nec dui
-		nunc mattis enim ut.
+		<slot />
 	</div>
 	<div
 		class="relative aspect-[4/3] w-[40%] min-w-[300px] rounded-sm border-2 border-accent-light
@@ -27,8 +21,9 @@
 	>
 		<a class="absolute z-10 h-full w-full cursor-pointer" target="_blank" href={link}>
 			<span
-				class="absolute left-[50%] z-10 translate-x-[-50%] translate-y-[-50%]
-                    text-xl font-bold text-text-dark dark:text-text-dark sm:text-2xl
+				class="absolute left-[50%] z-10 translate-x-[-50%] translate-y-[-60%]
+                    bg-gradient-to-bl from-primary-light to-secondary-light
+                    bg-clip-text text-xl font-bold text-[#00000000] sm:text-2xl
                     md:text-3xl lg:text-5xl">{title}</span
 			>
 			<img class="shimmer h-full w-full object-cover" src={image} alt={title} />

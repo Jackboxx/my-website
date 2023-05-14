@@ -9,13 +9,20 @@
 				class="max-w-[1200px] text-lg text-text-light
                 dark:text-text-dark lg:text-xl 2xl:text-3xl"
 			>
-				Magna eget est lorem ipsum dolor sit. Proin fermentum leo vel orci porta.
-				Pellentesque habitant morbi tristique senectus et. Curabitur gravida arcu ac
-				tortor. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Quis
-				hendrerit dolor magna eget est lorem ipsum dolor. Tempor id eu nisl nunc. Metus
-				dictum at tempor commodo ullamcorper a lacus vestibulum sed. Ultrices gravida
-				dictum fusce ut placerat orci nulla. Ultrices dui sapien eget mi proin sed libero.
-				Non blandit massa enim nec dui nunc mattis enim ut.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua. Cras fermentum odio eu feugiat
+				pretium nibh ipsum consequat nisl. Lectus sit amet est placerat in egestas.
+				Facilisi etiam dignissim diam quis enim. Bibendum neque egestas congue quisque
+				egestas diam in arcu cursus. Quis hendrerit dolor magna eget est lorem ipsum dolor
+				sit. Ac turpis egestas sed tempus. Erat nam at lectus urna duis convallis
+				convallis. Magna eget est lorem ipsum dolor sit amet. Mauris pellentesque pulvinar
+				pellentesque habitant morbi tristique senectus. Ut tellus elementum sagittis vitae
+				et leo. Libero volutpat sed cras ornare. Sit amet luctus venenatis lectus magna.
+				Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mauris augue
+				neque gravida in fermentum et sollicitudin ac orci. Cras ornare arcu dui vivamus.
+				Congue quisque egestas diam in arcu cursus euismod quis. Lacus vel facilisis
+				volutpat est velit egestas. Felis imperdiet proin fermentum leo vel orci porta. Ac
+				felis donec et odio.
 			</div>
 		</div>
 		<div class="flex w-full justify-end lg:w-[50%]">
