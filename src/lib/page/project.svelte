@@ -20,12 +20,18 @@
         dark:border-accent-dark sm:w-[40%]"
 	>
 		<a class="absolute z-10 h-full w-full cursor-pointer" target="_blank" href={link}>
-			<span
-				class="absolute left-[50%] z-10 translate-x-[-50%] translate-y-[-60%]
-                    bg-gradient-to-bl from-primary-light to-secondary-light
-                    bg-clip-text text-xl font-bold text-[#00000000] sm:text-2xl
-                    md:text-3xl lg:text-5xl">{title}</span
+			<div
+				class="absolute left-[50%] z-10 translate-x-[-50%] translate-y-[-60%] rounded
+                border-2 border-accent-light bg-bg-light px-4 text-center
+                dark:border-accent-dark dark:bg-bg-dark"
 			>
+				<span
+					class="
+                    bg-gradient-to-bl from-primary-light to-secondary-light
+                    bg-clip-text text-xl font-bold text-[#00000000] sm:text-lg
+                    md:text-xl lg:text-3xl">{title}</span
+				>
+			</div>
 			<img class="shimmer h-full w-full object-cover" src={image} alt={title} />
 		</a>
 	</div>
