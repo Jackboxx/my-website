@@ -26,7 +26,7 @@
 	ac feugiat. Facilisis volutpat est velit egestas dui. Cursus vitae congue mauris rhoncus
 	aenean. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Faucibus
 	ornare suspendisse sed nisi lacus sed viverra.
-</Project>/
+</Project>
 
 <Project
 	title="Rust CLI Tools"
