@@ -2,45 +2,60 @@
 	export let title: string;
 	export let link: string;
 	export let image: string;
+	export let reverse = false;
 </script>
 
-<a
-	class="project bg-transparent relative flex h-64 w-64 cursor-pointer items-center justify-center
-    duration-300 sm:h-96 sm:w-96"
-	href={link}
+<div
+	class={`tmp my-24 flex h-full flex-col-reverse items-center gap-2 sm:justify-around sm:gap-0`}
+	style={`--direction: ${reverse ? 'row-reverse' : 'row'}`}
 >
-	<img
-		src={image}
-		class="h-full w-full rounded-2xl object-cover duration-300"
-		alt="Project"
-	/>
 	<div
-		class="pointer-events-none absolute left-0 top-0 flex h-full w-full items-center
-        justify-center p-8 text-center text-4xl
-        font-bold text-text-light dark:text-text-dark"
+		class="aspect-[4/3] w-[40%] min-w-[300px] rounded bg-bg-light p-4 text-lg
+            text-text-light shadow-2xl dark:bg-bg-dark dark:text-text-dark 2xl:text-3xl"
 	>
-		{title}
+		Magna eget est lorem ipsum dolor sit. Proin fermentum leo vel orci porta. Pellentesque
+		habitant morbi tristique senectus et. Curabitur gravida arcu ac tortor. Donec et odio
+		pellentesque diam volutpat commodo sed egestas egestas. Quis hendrerit dolor magna
+		eget est lorem ipsum dolor. Tempor id eu nisl nunc. Metus dictum at tempor commodo
+		ullamcorper a lacus vestibulum sed. Ultrices gravida dictum fusce ut placerat orci
+		nulla. Ultrices dui sapien eget mi proin sed libero. Non blandit massa enim nec dui
+		nunc mattis enim ut.
 	</div>
-</a>
+	<div
+		class="relative aspect-[4/3] w-[40%] min-w-[300px] rounded-sm border-2 border-accent-light
+        shadow-2xl dark:border-accent-dark"
+	>
+		<a class="absolute z-10 h-full w-full cursor-pointer" target="_blank" href={link}>
+			<span
+				class="absolute left-[50%] z-10 translate-x-[-50%] translate-y-[-50%]
+                    text-xl font-bold text-text-dark dark:text-text-dark sm:text-2xl
+                    md:text-3xl lg:text-5xl">{title}</span
+			>
+			<img class="shimmer h-full w-full object-cover" src={image} alt={title} />
+		</a>
+	</div>
+</div>
 
 <style>
-	.project:hover {
-		transform: scale(1.1);
+	.shimmer {
+		-webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/500% 100%;
+		mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/500% 100%;
 	}
 
-	img {
-		opacity: 0.82;
-		filter: blur(3px);
+	.shimmer:hover {
+		animation: shimmer 750ms;
 	}
 
-	img:hover {
-		opacity: 1;
-		filter: blur(2px);
+	@keyframes shimmer {
+		100% {
+			-webkit-mask-position: left;
+			mask-position: left;
+		}
 	}
 
-	@media (pointer: none), (pointer: coarse), (hover: none) {
-		img {
-			opacity: 1;
+	@media (min-width: 640px) {
+		.tmp {
+			flex-direction: var(--direction);
 		}
 	}
 </style>
