@@ -27,8 +27,8 @@
 			>
 				<span
 					class="
-                    bg-gradient-to-bl from-primary-light to-secondary-light
-                    bg-clip-text text-xl font-bold text-[#00000000] sm:text-lg
+                    bg-gradient-to-bl from-primary-light to-secondary-light bg-clip-text
+                    font-sans text-xl font-bold text-[#00000000] sm:text-lg
                     md:text-xl lg:text-3xl">{title}</span
 				>
 			</div>

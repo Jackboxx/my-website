@@ -145,6 +145,7 @@
 
 	.fancyLetterTop,
 	.fancyLetterBottom {
+		font-family: 'Varela Round', sans-serif;
 		background-clip: text;
 		color: transparent;
 		-webkit-text-fill-color: transparent;

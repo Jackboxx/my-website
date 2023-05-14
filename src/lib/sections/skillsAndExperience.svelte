@@ -4,7 +4,7 @@
 
 <div class="m-4 mt-2 p-4 shadow-2xl lg:m-16">
 	<div class="flex flex-grow flex-col items-start justify-between lg:flex-row">
-		<div class="flex w-full justify-end lg:w-[50%]">
+		<div class="flex w-full justify-start lg:w-[50%]">
 			<ShapesVertical />
 		</div>
 		<div class="flex w-full justify-center lg:w-[50%]">
