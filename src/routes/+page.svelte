@@ -48,6 +48,8 @@
 <Header text={'Skills & Experience'} />
 <SkillsAndExperience />
 
+<div class="m-52 lg:m-80" />
+
 <Header text={'Contacts'} />
 <Contacts
 	email="lucygschwantner@gmail.com"
