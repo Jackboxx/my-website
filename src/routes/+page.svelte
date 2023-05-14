@@ -3,6 +3,7 @@
 	import Header from '$lib/page/header.svelte';
 	import Project from '$lib/page/project.svelte';
 	import AboutMe from '$lib/sections/aboutMe.svelte';
+	import Contacts from '$lib/sections/contacts.svelte';
 	import SkillsAndExperience from '$lib/sections/skillsAndExperience.svelte';
 </script>
 
@@ -47,4 +48,9 @@
 <Header text={'Skills & Experience'} />
 <SkillsAndExperience />
 
-<Header text={'Contact Me'} />
+<Header text={'Contacts'} />
+<Contacts
+	email="lucygschwantner@gmail.com"
+	github="https://github.com/Jackboxx"
+	linkedIn=""
+/>
