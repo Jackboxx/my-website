@@ -7,12 +7,16 @@
 
 <WelcomeHeader />
 
-<Header text={'About Me'} />
-<AboutMe />
+<div class="min-h-screen">
+	<Header text={'About Me'} />
+	<AboutMe />
+</div>
 
 <Header text={'Projects'} />
 
-<Header text={'Skills & Experience'} />
-<SkillsAndExperience />
+<div class="min-h-screen">
+	<Header text={'Skills & Experience'} />
+	<SkillsAndExperience />
+</div>
 
 <Header text={'Contact Me'} />
