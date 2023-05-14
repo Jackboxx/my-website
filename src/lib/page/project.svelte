@@ -6,18 +6,18 @@
 </script>
 
 <div
-	class={`tmp my-24 flex h-full flex-col-reverse items-center gap-2 sm:justify-around sm:gap-0`}
+	class={`tmp m-4 my-24 flex h-full flex-col-reverse items-center gap-2 sm:justify-around sm:gap-0`}
 	style={`--direction: ${reverse ? 'row-reverse' : 'row'}`}
 >
 	<div
-		class="aspect-[4/3] w-[40%] min-w-[300px] rounded bg-bg-light p-4 text-lg
-            text-text-light shadow-2xl dark:bg-bg-dark dark:text-text-dark 2xl:text-3xl"
+		class="aspect-[4/3] w-full min-w-[300px] rounded bg-bg-light p-4 text-lg text-text-light
+            shadow-2xl dark:bg-bg-dark dark:text-text-dark sm:w-[40%] 2xl:text-3xl"
 	>
 		<slot />
 	</div>
 	<div
-		class="relative aspect-[4/3] w-[40%] min-w-[300px] rounded-sm border-2 border-accent-light
-        shadow-2xl dark:border-accent-dark"
+		class="relative aspect-[4/3] w-full min-w-[300px] rounded-sm border-2 border-accent-light shadow-2xl
+        dark:border-accent-dark sm:w-[40%]"
 	>
 		<a class="absolute z-10 h-full w-full cursor-pointer" target="_blank" href={link}>
 			<span
