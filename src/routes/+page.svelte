@@ -54,5 +54,5 @@
 <Contacts
 	email="lucygschwantner@gmail.com"
 	github="https://github.com/Jackboxx"
-	linkedIn=""
+	linkedIn="https://www.linkedin.com/in/moritz-gschwantner-340142251/"
 />
