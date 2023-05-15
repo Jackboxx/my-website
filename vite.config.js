@@ -8,6 +8,7 @@ const config = {
 		alias: [{ find: '$lib', replacement: path.resolve(__dirname, 'src/lib') }]
 	},
 	server: {
+		https: true,
 		host: 'localhost',
 		port: 3000
 	}
