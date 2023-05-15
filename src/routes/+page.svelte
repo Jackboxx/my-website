@@ -21,12 +21,16 @@
 	image="/img/vocal.png"
 	reverse={true}
 >
-	Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Vitae tortor
-	condimentum lacinia quis vel. Eget egestas purus viverra accumsan in nisl. Fermentum
-	iaculis eu non diam phasellus. Semper quis lectus nulla at. Sapien faucibus et molestie
-	ac feugiat. Facilisis volutpat est velit egestas dui. Cursus vitae congue mauris rhoncus
-	aenean. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Faucibus
-	ornare suspendisse sed nisi lacus sed viverra.
+	Vocal is a terminal based user interface that plays audio and music and looks cool while
+	doing it. I wrote this project using the <a
+		target="_blank"
+		href="https://crates.io/crates/tui">tui-rs</a
+	>
+	Rust crate to create the UI and other crates like
+	<a href="https://crates.io/crates/rodio" target="_blank">rodio</a>
+	to manage music playback. <br />
+	The whole project is available as an open-source project on GitHub along with up to date
+	documentation on how to configure the interface and functionality to your liking. <br />
 </Project>
 
 <Project
@@ -35,12 +39,17 @@
 	image="/img/rust-cli-tools.png"
 	reverse={false}
 >
-	Posuere morbi leo urna molestie at elementum eu facilisis sed. Aliquam sem fringilla ut
-	morbi. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Enim nec dui nunc
-	mattis enim ut tellus elementum. Pharetra sit amet aliquam id diam maecenas. Tellus id
-	interdum velit laoreet id donec ultrices tincidunt arcu. Nunc id cursus metus aliquam.
-	Malesuada fames ac turpis egestas. Sit amet porttitor eget dolor morbi non. Eu feugiat
-	pretium nibh ipsum consequat nisl.
+	This is an ever growing list of command line tools I wrote either for fun or to solve
+	some problem I had when working. <br />
+	Currently my favorite one has to be
+	<a target="_blank" href="https://github.com/Jackboxx/archwiki-rs">archwiki-rs</a>
+	which is a small utility I made to fetch pages from the
+	<a href="https://wiki.archlinux.org/" target="_blank">ArchWiki</a>. I often found myself
+	needing to look up a command or file location in the ArchWiki but I had to navigate to
+	the website and search for the page I needed every time... <br />
+	So I made a CLI web-scrapper that gets the contents of a particular page directly into my
+	terminal + it shows me recommendations for page titles in case a page I am looking for does
+	not exist.
 </Project>
 
 <div class="m-52 lg:m-80" />
