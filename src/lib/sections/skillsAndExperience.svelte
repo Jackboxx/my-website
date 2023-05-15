@@ -3,10 +3,9 @@
 </script>
 
 <div class="m-4 mt-2 p-4 shadow-2xl lg:m-16">
-	<div class="flex flex-grow flex-col items-start justify-between gap-2 lg:flex-row">
-		<div class="flex w-full justify-start lg:w-[50%]">
-			<ShapesVertical />
-		</div>
+	<div
+		class="flex flex-grow flex-col items-start justify-between gap-2 lg:flex-row-reverse"
+	>
 		<div class="flex w-full justify-center lg:w-[50%]">
 			<div
 				class="max-w-[1200px] text-lg text-text-light
@@ -27,6 +26,9 @@
 				volutpat est velit egestas. Felis imperdiet proin fermentum leo vel orci porta. Ac
 				felis donec et odio.
 			</div>
+		</div>
+		<div class="flex w-full justify-start lg:w-[50%]">
+			<ShapesVertical />
 		</div>
 	</div>
 </div>
