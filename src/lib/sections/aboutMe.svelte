@@ -13,12 +13,13 @@
 				related projects and tinkering with my development environment in my free time.
 				<br />
 				At the moment I am working at TimeTac (a time management software company) as a frontend
-				web developer using TypeScript, React, and Redux. Since I work fully remote at this
-				job my communication abilities are key to a successful business relationship.
+				web developer using TypeScript, React, and Redux. Since I work fully remotely at this
+				job my communication abilities are key to a successful business relationship with my
+				employer.
 				<br />
 				Lastly, I have been enjoying using Rust
 				<img class="inline h-7 2xl:h-9" alt="" src="/img/ferris-happy.svg" />
-				to write development tools (you can see some of those in the "Projects" section below).
+				to write development tools (you can see some of these in the "Projects" section below).
 			</div>
 		</div>
 		<div class="flex w-full justify-end lg:w-[50%]">
