@@ -1,30 +1,53 @@
-<script>
+<script lang="ts">
 	import ShapesVertical from '$lib/effects/shapesVertical.svelte';
+
+	let skills: { skill: string; subSkills: string[] }[] = [
+		{
+			skill: 'Rust',
+			subSkills: [
+				'API programming (actix_web, tokio)',
+				'CLI tool development (clap, tui-rs)'
+			]
+		},
+		{ skill: 'Frontend', subSkills: ['TypeScript', 'React', 'Redux', 'Svelte'] },
+		{ skill: 'Linux/Development', subSkills: ['Git', 'Ansible', 'shell scripts'] },
+		{
+			skill: 'Golang',
+			subSkills: ['REST API development']
+		}
+	];
 </script>
 
 <div class="m-4 mt-2 p-4 shadow-2xl lg:m-16">
 	<div
 		class="flex flex-grow flex-col items-start justify-between gap-2 lg:flex-row-reverse"
 	>
-		<div class="flex w-full justify-center lg:w-[50%]">
+		<div class="w-full lg:w-[50%]">
 			<div
-				class="max-w-[1200px] text-lg text-text-light
-                dark:text-text-dark lg:text-xl 2xl:text-3xl"
+				class="grid max-w-[1200px] grid-cols-1 text-lg
+                text-text-light dark:text-text-dark sm:grid-cols-2 lg:text-xl 2xl:text-3xl"
 			>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Cras fermentum odio eu feugiat
-				pretium nibh ipsum consequat nisl. Lectus sit amet est placerat in egestas.
-				Facilisi etiam dignissim diam quis enim. Bibendum neque egestas congue quisque
-				egestas diam in arcu cursus. Quis hendrerit dolor magna eget est lorem ipsum dolor
-				sit. Ac turpis egestas sed tempus. Erat nam at lectus urna duis convallis
-				convallis. Magna eget est lorem ipsum dolor sit amet. Mauris pellentesque pulvinar
-				pellentesque habitant morbi tristique senectus. Ut tellus elementum sagittis vitae
-				et leo. Libero volutpat sed cras ornare. Sit amet luctus venenatis lectus magna.
-				Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mauris augue
-				neque gravida in fermentum et sollicitudin ac orci. Cras ornare arcu dui vivamus.
-				Congue quisque egestas diam in arcu cursus euismod quis. Lacus vel facilisis
-				volutpat est velit egestas. Felis imperdiet proin fermentum leo vel orci porta. Ac
-				felis donec et odio.
+				{#each skills as skill}
+					<div class="m-4">
+						<div
+							class="w-fit rounded bg-secondary-light px-4
+                            py-1
+                            font-bold text-text-light dark:bg-secondary-dark"
+						>
+							{skill.skill}
+						</div>
+						<ul class="list-inside list-disc">
+							{#each skill.subSkills as subSkill}
+								<li
+									class="text-md ml-4 lg:text-lg
+                                    2xl:text-xl"
+								>
+									{subSkill}
+								</li>
+							{/each}
+						</ul>
+					</div>
+				{/each}
 			</div>
 		</div>
 		<div class="flex w-full justify-start lg:w-[50%]">
