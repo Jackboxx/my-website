@@ -40,7 +40,7 @@
 	reverse={false}
 >
 	This is an ever growing list of command line tools I wrote either for fun or to solve
-	some problem I had with the way I work. <br />
+	some problem I had when working. <br />
 	Currently my favorite one has to be
 	<a target="_blank" href="https://github.com/Jackboxx/archwiki-rs">archwiki-rs</a>
 	which is a small utility I made to fetch pages from the
