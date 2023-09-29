@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let phrase = 'Lucy Gschwantner';
+	export let phrase = 'June Gschwantner';
 	export let textColor = '#ffffff';
 	export let textClipColor = '#9f92ec';
 

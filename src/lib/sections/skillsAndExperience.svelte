@@ -29,11 +29,7 @@
 			>
 				{#each skills as skill}
 					<div class="m-4">
-						<div
-							class="w-fit rounded bg-secondary-light px-4
-                            py-1
-                            font-bold text-text-light dark:bg-secondary-dark"
-						>
+						<div class="w-fit rounded px-4 py-1 font-bold">
 							{skill.skill}
 						</div>
 						<ul class="list-inside list-disc">
