@@ -49,7 +49,10 @@
 	the website and search for the page I needed every time... <br />
 	So I made a CLI web-scrapper that gets the contents of a particular page directly into my
 	terminal + it shows me recommendations for page titles in case a page I am looking for does
-	not exist.
+	not exist.  <br />
+    At this point there are also plugins that use this tool to integrate into 
+    <a href="https://github.com/Jackboxx/archwiki-obsidian" target="_blank">Obsidian</a> and 
+    <a href="https://github.com/Jackboxx/archwiki-nvim" target="_blank">Neovim</a>.
 </Project>
 
 <div class="m-52 lg:m-80" />
