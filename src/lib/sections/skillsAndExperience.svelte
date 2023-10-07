@@ -9,13 +9,16 @@
 				'CLI tool development (clap, tui-rs)'
 			]
 		},
-		{ skill: 'Web', subSkills: ['TypeScript', 'React', 'Redux', 'Svelte'] },
-		{ skill: 'Linux/Development', subSkills: ['Git', 'shell scripts'] },
-		{ skill: 'Automation', subSkills: ['Gitlab/Github CI', 'Ansible'] },
 		{
 			skill: 'Golang',
 			subSkills: ['REST API development']
-		}
+		},
+		{ skill: 'Web', subSkills: ['TypeScript', 'React', 'Redux', 'Svelte'] },
+        {
+            skill: 'Databases', subSkills: ['MySQL', 'PostgreSQL', 'MongoDB']
+        },
+		{ skill: 'Linux/Development', subSkills: ['Git', 'shell scripts'] },
+		{ skill: 'Automation', subSkills: ['Gitlab/Github CI', 'Ansible'] },
 	];
 </script>
 
