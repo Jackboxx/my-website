@@ -2,6 +2,8 @@
 	import ShapesVertical from '$lib/effects/shapesVertical.svelte';
 
 	let skills: { skill: string; subSkills: string[] }[] = [
+		{ skill: 'Frontend', subSkills: ['TypeScript', 'React', 'Redux', 'Svelte'] },
+		{ skill: 'Linux/Development', subSkills: ['Git', 'Ansible', 'shell scripts'] },
 		{
 			skill: 'Rust',
 			subSkills: [
@@ -9,12 +11,13 @@
 				'CLI tool development (clap, tui-rs)'
 			]
 		},
-		{ skill: 'Frontend', subSkills: ['TypeScript', 'React', 'Redux', 'Svelte'] },
-		{ skill: 'Linux/Development', subSkills: ['Git', 'Ansible', 'shell scripts'] },
 		{
 			skill: 'Golang',
 			subSkills: ['REST API development']
-		}
+		},
+        {
+            skill: 'Databases', subSkills: ['MySQL', 'PostgreSQL', 'MongoDB']
+        },
 	];
 </script>
 
