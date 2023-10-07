@@ -14,11 +14,12 @@
 			subSkills: ['REST API development']
 		},
 		{ skill: 'Web', subSkills: ['TypeScript', 'React', 'Redux', 'Svelte'] },
-        {
-            skill: 'Databases', subSkills: ['MySQL', 'PostgreSQL', 'MongoDB']
-        },
+		{
+			skill: 'Databases',
+			subSkills: ['MySQL', 'PostgreSQL', 'MongoDB']
+		},
 		{ skill: 'Linux/Development', subSkills: ['Git', 'shell scripts'] },
-		{ skill: 'Automation', subSkills: ['Gitlab/Github CI', 'Ansible'] },
+		{ skill: 'Automation', subSkills: ['Gitlab/Github CI', 'Ansible'] }
 	];
 </script>
 
